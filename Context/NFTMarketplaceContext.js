@@ -48,8 +48,8 @@ export const NFTMarketplaceContext = React.createContext();
             }else {
                 console.log("No Account Found");
             }   
-            
             console.log(currentAccount);
+            
         } catch (error) {
             console.log("Something wrong while connecting to wallet");
         }

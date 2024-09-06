@@ -10,20 +10,22 @@
   },
   "dependencies": {
     "@nomicfoundation/hardhat-ignition": "^0.15.5",
-    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/contracts": "^4.9.6",
     "axios": "^1.7.7",
+    "esm": "^3.2.25",
     "ether": "^0.0.9",
     "framer-motion": "^7.2.1",
-    "hardhat": "^2.22.10",
     "ipfs-http-client": "^60.0.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-dropzone": "^14.2.2",
     "react-icons": "^4.4.0",
+    "sentry": "^0.1.2",
     "web3modal": "^1.9.12"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0"
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10"
   }
 }

@@ -1,17 +1,15 @@
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
-// Define any default parameters (if needed)
-const DEFAULT_LISTING_PRICE = ethers.utils.parseEther("0.025"); // 0.025 ETH
+const JAN_1ST_2030 = 1893456000;
+const ONE_GWEI = 1_000_000_000n;
 
-module.exports = buildModule("NFTMarketplaceModule", (m) => {
-  // Get customizable parameters from the deployment environment or fallback to default
-  const listingPrice = m.getParameter("listingPrice", DEFAULT_LISTING_PRICE);
+module.exports = buildModule("LockModule", (m) => {
+  const unlockTime = m.getParameter("unlockTime", JAN_1ST_2030);
+  const lockedAmount = m.getParameter("lockedAmount", ONE_GWEI);
 
-  // Deploy the NFTMarketplace contract with the listingPrice (if required)
-  const NFTMarketplace = m.contract("NFTMarketplace", [], {
-    value: listingPrice,
+  const NFTMarketplace = m.contract("Lock", [unlockTime], {
+    value: lockedAmount,
   });
 
-  // Return the deployed contract
   return { NFTMarketplace };
 });
