@@ -33,7 +33,7 @@ const contactus = () => {
             </div>
             <div className={Style.contactus_box_box_left_item}>
               <h3>☎ PHONE</h3>
-              <p>000-123-456-7890</p>
+              <p>6266915817</p>
             </div>
             <div className={Style.contactus_box_box_left_item}>
               <h3>🌏 SOCIALS</h3>

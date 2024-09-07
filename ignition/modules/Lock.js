@@ -10,6 +10,6 @@ module.exports = buildModule("LockModule", (m) => {
   const NFTMarketplace = m.contract("Lock", [unlockTime], {
     value: lockedAmount,
   });
-
+ 
   return { NFTMarketplace };
 });

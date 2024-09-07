@@ -4,6 +4,12 @@ import { ethers } from 'hardhat';
 import Router from 'next/router'
 import axios from 'axios';
 import { create as ipfsHttpClient } from 'ipfs-http-client';
+import { promises as fs } from 'fs';
+
+if (typeof window === 'undefined') {
+    // Use fs here safely in the Node.js environment
+    const data = await fs.readFile('/path/to/file');
+  }
 
 const client = ipfsHttpClient("http://ipfs.infura.io:5001/api/v0")
 
